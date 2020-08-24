@@ -50,12 +50,12 @@ def escape_from_collision(fgmask, object, stuck, current_x, current_y):
 
 
 recording = 0
-saved_video_counter = 0;
-saved_image_counter = 0;
+saved_video_counter = 0
+saved_image_counter = 0
 square_man_regular = cv2.imread("bird.jpg")
 square_man_regular = resize(square_man_regular, 2)
 square_man = square_man_regular
-score = 0;
+score = 0
 in_movement = 0
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
 
@@ -142,6 +142,7 @@ while True:
         img_name = "image_{}.jpg".format(saved_image_counter)
         cv2.imwrite(img_name, frame)
         saved_image_counter = saved_image_counter + 1
+
     # elif k % 256 == 82: # R key pressed
     #     recording = True
     # elif k % 256 == 80: # P key pressed
